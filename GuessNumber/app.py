@@ -10,6 +10,7 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Very Long String'
 app.config['BOOTSTRAP_SERVER_LOCAL'] = True
+app.config['DEBUG'] = True
 bootstrap = Bootstrap(app)
 
 @app.route('/')
