@@ -2,9 +2,9 @@
 
 import random
 from flask import Flask, render_template, flash, redirect, url_for, session
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import IntegerField, SubmitField
-from wtforms.validators import Required, NumberRange
+from wtforms.validators import DataRequired, NumberRange
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -41,9 +41,9 @@ def guess():
    return render_template('guess.html', form=form)
 
 
-class GuessNumberForm(Form):
+class GuessNumberForm(FlaskForm):
     number = IntegerField(u'Input an integer number(0~1000)',
-                          validators=[Required('Please input a validate number'),
+                          validators=[DataRequired('Please input a validate number'),
                                       NumberRange(0, 1000, 'Please input in 0~1000!')])
     submit = SubmitField('Submit')
 
