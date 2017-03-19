@@ -1,0 +1,8 @@
+Flask==0.12
+Flask-Bootstrap==3.3.7.1
+Flask-WTF==0.14.2
+gevent==1.2.1
+gunicorn==19.7.0
+Jinja2==2.9.5
+Werkzeug==0.12.1
+WTForms==2.1
